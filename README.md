@@ -9,4 +9,8 @@ This is the repository for the official website of PDAO.
 
 ## TODO:
 
-1. Framework (rewrite) or reuse legacy code ?
+1. Framework (rewrite) or reuse legacy code ? -> rewrite (0130)
+
+## Tech Stack:
+
+1. Gatsby
