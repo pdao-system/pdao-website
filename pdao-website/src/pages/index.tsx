@@ -1,9 +1,13 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import "@picocss/pico/css/pico.min.css";
-import { } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import { HashLink } from 'react-router-hash-link';
+
+import { GiArchiveRegister } from "react-icons/gi"
+import { AiFillTrophy } from "react-icons/ai"
+import { RiFileInfoLine } from "react-icons/ri"
 /*
 const pageStyles = {
   color: "#232129",
@@ -192,7 +196,15 @@ const IndexPage: React.FC<PageProps> = () => {
   )
 }
 
+
 */
+
+const center = {
+    width: '100%',
+    display: "flex",
+    justifyContent: "center",
+    fontWeight: "lighter"
+}
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
@@ -200,16 +212,76 @@ const IndexPage: React.FC<PageProps> = () => {
             <nav>
                 <ul>
                     <li><StaticImage height={32} src="../images/logo.png" alt="PDAO LOGO" /></li>
-                    <li>PDAO 2023</li>
-                    <li><a>介紹</a></li>
-                    <li><a>活動資訊</a></li>
-                    <li><a>錄取隊伍</a></li>
+                    <li>
+                        <HashLink smooth to="/#about">
+                            PDAO 2023s
+                        </HashLink>
+                    </li>
+                    <li>
+                        <HashLink smooth to="/#about">
+                            介紹
+                        </HashLink>
+                    </li>
+                    <li>
+                        <HashLink smooth to="/#info">
+                            活動資訊
+                        </HashLink>
+                    </li>
+                    <li>
+                        <HashLink smooth to="/#teams">
+                            錄取隊伍
+                        </HashLink>
+                    </li>
                 </ul>
                 <ul>
-                    <li><a>聯絡我們</a></li>
+                    <li>
+                        <HashLink smooth to="/#contact">
+                            聯絡我們
+                        </HashLink>
+                    </li>
                 </ul>
             </nav>
-        </main>
+            <section style={center} >
+                <StaticImage src="../images/logo.png" alt="PDAO LOGO" />
+                <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" />
+            </section>
+            <section id="about">
+                <hgroup>
+                    <h3 style={center}>PDAO</h3>
+                    <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
+                    <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
+                    <p></p>
+                </hgroup>
+            </section>
+            <section id="info">
+                <hgroup>
+                    <h3 style={center}>活動資訊</h3>
+                    <h5 style={center}>內容僅供參考，以正式活動簡章為準。</h5>
+                    <p></p>
+                </hgroup>
+                <div className="grid">
+                    <div style={center}>
+                        <article>
+                            <AiFillTrophy></AiFillTrophy>活動獎項
+                        </article>
+                    </div>
+                    <div style={center}>
+                        <article>
+                            <GiArchiveRegister></GiArchiveRegister>報名須知
+                        </article>
+                    </div>
+                    <div style={center}>
+                        <article>
+                            <RiFileInfoLine></RiFileInfoLine>競賽規則
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section id="teams">
+            </section>
+            <section id="contact">
+            </section>
+        </main >
     )
 }
 
