@@ -207,81 +207,85 @@ const center = {
 }
 
 const IndexPage: React.FC<PageProps> = () => {
+    const aboutRef = React.useRef<null | HTMLSelectElement>(null);
+    const infoRef = React.useRef<null | HTMLSelectElement>(null);
+    const teamsRef = React.useRef<null | HTMLSelectElement>(null);
+    const contactRef = React.useRef<null | HTMLSelectElement>(null);
     return (
-        <main className="container">
-            <nav>
+        <body>
+            <nav className="container-fluid" style={{ position: "fixed", backdropFilter: "saturate(180%) blur(20px)", backgroundColor: "var(--nav-background-color)", zIndex: 99, boxShadow: "0 1px 0 var(--nav-border-color)" }}>
                 <ul>
                     <li><StaticImage height={32} src="../images/logo.png" alt="PDAO LOGO" /></li>
                     <li>
-                        <HashLink smooth to="/#about">
-                            PDAO 2023s
-                        </HashLink>
+                        <a onClick={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth', block: "center" })}>PDAO 2023</a>
                     </li>
                     <li>
-                        <HashLink smooth to="/#about">
-                            介紹
-                        </HashLink>
+                        <a onClick={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth', block: "center" })}>介紹
+                        </a>
                     </li>
                     <li>
-                        <HashLink smooth to="/#info">
-                            活動資訊
-                        </HashLink>
+                        <a onClick={() => infoRef.current?.scrollIntoView({ behavior: 'smooth', block: "center" })}>活動資訊</a>
+
                     </li>
                     <li>
-                        <HashLink smooth to="/#teams">
-                            錄取隊伍
-                        </HashLink>
+                        <a onClick={() => teamsRef.current?.scrollIntoView({ behavior: 'smooth', block: "center" })}>錄取隊伍</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
-                        <HashLink smooth to="/#contact">
-                            聯絡我們
-                        </HashLink>
+                        <a onClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}>聯絡我們</a>
                     </li>
                 </ul>
             </nav>
-            <section style={center} >
-                <StaticImage src="../images/logo.png" alt="PDAO LOGO" />
-                <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" />
-            </section>
-            <section id="about">
-                <hgroup>
-                    <h3 style={center}>PDAO</h3>
-                    <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
-                    <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
-                    <p></p>
-                </hgroup>
-            </section>
-            <section id="info">
-                <hgroup>
-                    <h3 style={center}>活動資訊</h3>
-                    <h5 style={center}>內容僅供參考，以正式活動簡章為準。</h5>
-                    <p></p>
-                </hgroup>
-                <div className="grid">
-                    <div style={center}>
-                        <article>
-                            <AiFillTrophy></AiFillTrophy>活動獎項
-                        </article>
+            <main className="container">
+                <section style={center} >
+                    <StaticImage src="../images/logo.png" alt="PDAO LOGO" />
+                    <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" />
+                </section>
+                <section ref={aboutRef}>
+                    <hgroup>
+                        <h3 style={center}>PDAO</h3>
+                        <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
+                        <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
+                        <p></p>
+                    </hgroup>
+                </section>
+                <section ref={infoRef}>
+                    <hgroup>
+                        <h3 style={center}>活動資訊</h3>
+                        <h5 style={center}>內容僅供參考，以正式活動簡章為準。</h5>
+                        <p></p>
+                    </hgroup>
+                    <div className="grid">
+                        <div style={center}>
+                            <article>
+                                <AiFillTrophy></AiFillTrophy>活動獎項
+                            </article>
+                        </div>
+                        <div style={center}>
+                            <article>
+                                <GiArchiveRegister></GiArchiveRegister>報名須知
+                            </article>
+                        </div>
+                        <div style={center}>
+                            <article>
+                                <RiFileInfoLine></RiFileInfoLine>競賽規則
+                            </article>
+                        </div>
                     </div>
-                    <div style={center}>
-                        <article>
-                            <GiArchiveRegister></GiArchiveRegister>報名須知
-                        </article>
-                    </div>
-                    <div style={center}>
-                        <article>
-                            <RiFileInfoLine></RiFileInfoLine>競賽規則
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section id="teams">
-            </section>
-            <section id="contact">
-            </section>
-        </main >
+                </section>
+                <section ref={teamsRef}>
+                </section>
+                <section ref={contactRef}>
+                    <hgroup>
+                        <h5 style={center}>如有任何疑問，歡迎來信洽詢：<a href="mailto: PDAO2023@ntu.im">PDAO2023@ntu.im</a></h5>
+                        <h5 style={center}>Programming Design And Optimization Website</h5>
+                        <h5 style={center}>Information Management, National Taiwan University</h5>
+                        <p></p>
+                    </hgroup>
+                </section>
+            </main >
+        </body>
     )
 }
 
