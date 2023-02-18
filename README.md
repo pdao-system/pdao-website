@@ -13,6 +13,6 @@ This is the repository for the official website of PDAO.
 
 ## Tech Stack:
 
-1. Gatsby
-2. pico css
+1. Gatsby 
+2. pico css 
 3. react-icons
