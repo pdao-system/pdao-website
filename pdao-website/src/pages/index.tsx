@@ -239,13 +239,43 @@ const IndexPage: React.FC<PageProps> = () => {
                     </li>
                 </ul>
             </nav>
-            <StaticImage src="../images/ntu.jpg" layout="fullWidth" alt="ntu" />
+            <div style={{ display: "grid" }}>
+                {/* You can use a GatsbyImage component if the image is dynamic */}
+                <StaticImage
+                    style={{
+                        gridArea: "1/1",
+                        // You can set a maximum height for the image, if you wish.
+                        // maxHeight: 600,
+                        opacity:0.2
+                    }}
+                    layout="fullWidth"
+                    // You can optionally force an aspect ratio for the generated image
+                    aspectRatio={3 / 1}
+                    // This is a presentational image, so the alt should be an empty string
+                    alt=""
+                    // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
+                    src="../images/ntu.jpg"
+                    formats={["auto", "webp", "avif"]}
+                />
+                <div
+                    style={{
+                        // By using the same grid area for both, they are stacked on top of each other
+                        gridArea: "1/1",
+                        position: "relative",
+                        // This centers the other elements inside the hero component
+                        placeItems: "center",
+                        display: "grid",
+                    }}
+                >
+                    {/* Any content here will be centered in the component */}
+                    <div style={center}>
+                        <StaticImage src="../images/logo.png" alt="PDAO LOGO" layout="fixed" height={200} />
+                        <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" layout="constrained" />
+                    </div>
+
+                </div>
+            </div>
             <main className="container">
-            
-                <section style={center}>
-                    <StaticImage src="../images/logo.png" alt="PDAO LOGO" layout="fixed" height={200} />
-                    <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" layout="constrained" />
-                </section>
                 <section ref={aboutRef}>
                     <hgroup>
                         <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
@@ -254,26 +284,26 @@ const IndexPage: React.FC<PageProps> = () => {
                     </hgroup>
                     <p>
                         <div className="grid">
-                            <div data-tooltip="Tooltip"> 
-                                <StaticImage src="../images/pizza.jpg" alt="pizza" />
+                            <div data-tooltip="披薩吃到飽">
+                                <StaticImage src="../images/pizza.jpg" alt="pizza" aspectRatio={16 / 13} />
                             </div>
-                            <div>
-                                <StaticImage src="../images/coding.jpg" alt="coding" />
+                            <div data-tooltip="12道題目，難度不一">
+                                <StaticImage src="../images/coding.jpg" alt="coding" aspectRatio={16 / 13} />
                             </div>
-                            <div>
-                                <StaticImage src="../images/company.jpg" alt="company" />
+                            <div data-tooltip="企業參訪">
+                                <StaticImage src="../images/company.jpg" alt="company" aspectRatio={16 / 13} />
                             </div>
                         </div>
                     </p>
                     <div className="grid">
-                        <div>
-                            <StaticImage src="../images/ballon.jpg" alt="ballon" />
+                        <div data-tooltip="答對題目可獲得氣球">
+                            <StaticImage src="../images/ballon.jpg" alt="ballon" aspectRatio={16 / 14} />
                         </div>
-                        <div>
-                            <StaticImage src="../images/win.jpg" layout="constrained" alt="win" />
+                        <div data-tooltip="豐富獎品任君挑選">
+                            <StaticImage src="../images/win.jpg" alt="win" aspectRatio={16 / 14} transformOptions={{ cropFocus: "entropy" }} />
                         </div>
-                        <div>
-                            <StaticImage src="../images/friend.jpg" alt="friend" />
+                        <div data-tooltip="與隊友腦力激盪">
+                            <StaticImage src="../images/friend.jpg" alt="friend" aspectRatio={16 / 14} />
                         </div>
                     </div>
                 </section>
