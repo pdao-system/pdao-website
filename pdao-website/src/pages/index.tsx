@@ -250,7 +250,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     }}
                     layout="fullWidth"
                     // You can optionally force an aspect ratio for the generated image
-                    aspectRatio={3 / 1}
+                    aspectRatio={2 / 1}
                     // This is a presentational image, so the alt should be an empty string
                     alt=""
                     // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
