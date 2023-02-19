@@ -214,7 +214,7 @@ const IndexPage: React.FC<PageProps> = () => {
     const teamsRef = React.useRef<null | HTMLSelectElement>(null);
     const contactRef = React.useRef<null | HTMLSelectElement>(null);
     return (
-        <body style={{ "--spacing": "0.8rem" }}>
+        <body style={{ "--spacing": "0.8rem", "prefers-color-scheme": "dark" }}>
             <nav className="container-fluid" style={{ position: "fixed", backdropFilter: "saturate(180%) blur(20px)", backgroundColor: "var(--nav-background-color)", zIndex: 99, boxShadow: "0 1px 0 var(--nav-border-color)" }}>
                 <ul>
                     <li><StaticImage height={32} src="../images/logo.png" alt="PDAO LOGO" /></li>
@@ -246,11 +246,11 @@ const IndexPage: React.FC<PageProps> = () => {
                         gridArea: "1/1",
                         // You can set a maximum height for the image, if you wish.
                         // maxHeight: 600,
-                        opacity:0.2
+                        opacity: 0.2
                     }}
                     layout="fullWidth"
                     // You can optionally force an aspect ratio for the generated image
-                    aspectRatio={2 / 1}
+                    aspectRatio={1 / 1}
                     // This is a presentational image, so the alt should be an empty string
                     alt=""
                     // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
@@ -268,9 +268,14 @@ const IndexPage: React.FC<PageProps> = () => {
                     }}
                 >
                     {/* Any content here will be centered in the component */}
-                    <div style={center}>
-                        <StaticImage src="../images/logo.png" alt="PDAO LOGO" layout="fixed" height={200} />
-                        <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" layout="constrained" />
+                    <div className="grid" style={center}>
+                        <div>
+                            <StaticImage src="../images/logo.png" alt="PDAO LOGO" />
+                        </div>
+                        <div>
+                            <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" />
+                        </div>
+
                     </div>
 
                 </div>
