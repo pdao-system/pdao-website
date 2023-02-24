@@ -250,12 +250,11 @@ const IndexPage: React.FC<PageProps> = () => {
                     }}
                     layout="fullWidth"
                     // You can optionally force an aspect ratio for the generated image
-                    aspectRatio={1 / 1}
+                    aspectRatio={2 / 1}
                     // This is a presentational image, so the alt should be an empty string
-                    alt=""
+                    alt="ntu"
                     // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
                     src="../images/ntu.jpg"
-                    formats={["auto", "webp", "avif"]}
                 />
                 <div
                     style={{
@@ -454,7 +453,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </section>
                 <section ref={contactRef}>
                     <hgroup>
-                        <h6 style={center}>如有任何疑問，歡迎來信洽詢：<a href="mailto: PDAO2023@ntu.im">PDAO2023@ntu.im</a></h6>
+                        <h6 style={center}>如有任何疑問，歡迎來信洽詢：<a href="mailto: pdaopdao@ntu.im">pdaopdao@ntu.im</a></h6>
                         <h6 style={center}>Programming Design And Optimization Website</h6>
                         <h6 style={center}>Information Management, National Taiwan University</h6>
                         <small style={center}>
