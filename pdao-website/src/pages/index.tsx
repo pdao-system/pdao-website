@@ -213,8 +213,9 @@ const IndexPage: React.FC<PageProps> = () => {
     const infoRef = React.useRef<null | HTMLSelectElement>(null);
     const teamsRef = React.useRef<null | HTMLSelectElement>(null);
     const contactRef = React.useRef<null | HTMLSelectElement>(null);
-    const [windowWidth, setWidth] = React.useState(window.innerWidth);
-    const [windowHeight, setHeight] = React.useState(window.innerHeight);
+    
+    const [windowWidth, setWidth] = React.useState(0);
+    const [windowHeight, setHeight] = React.useState(0);
     const updateDimensions = () => {
         setWidth(window.innerWidth);
         setHeight(window.innerHeight);
@@ -224,6 +225,7 @@ const IndexPage: React.FC<PageProps> = () => {
         window.addEventListener("resize", updateDimensions);
         return () => window.removeEventListener("resize", updateDimensions);
     }, []);
+
     return (
         <body style={{ "--spacing": "0.8rem", "prefers-color-scheme": "dark" }}>
             <nav className="container-fluid" style={{ position: "fixed", backdropFilter: "saturate(180%) blur(20px)", backgroundColor: "var(--nav-background-color)", zIndex: 99, boxShadow: "0 1px 0 var(--nav-border-color)" }}>
