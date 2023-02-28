@@ -213,11 +213,21 @@ const IndexPage: React.FC<PageProps> = () => {
     const infoRef = React.useRef<null | HTMLSelectElement>(null);
     const teamsRef = React.useRef<null | HTMLSelectElement>(null);
     const contactRef = React.useRef<null | HTMLSelectElement>(null);
+    const [windowWidth, setWidth] = React.useState(window.innerWidth);
+    const [windowHeight, setHeight] = React.useState(window.innerHeight);
+    const updateDimensions = () => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+        console.log(windowWidth)
+    }
+    React.useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
     return (
         <body style={{ "--spacing": "0.8rem", "prefers-color-scheme": "dark" }}>
             <nav className="container-fluid" style={{ position: "fixed", backdropFilter: "saturate(180%) blur(20px)", backgroundColor: "var(--nav-background-color)", zIndex: 99, boxShadow: "0 1px 0 var(--nav-border-color)" }}>
                 <ul>
-                    <li><StaticImage height={32} src="../images/logo.png" alt="PDAO LOGO" /></li>
                     <li>
                         <a onClick={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth', block: "start" })}>PDAO 2023</a>
                     </li>
@@ -254,7 +264,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     // This is a presentational image, so the alt should be an empty string
                     alt="ntu"
                     // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
-                    src="../images/ntu.jpg"
+                    src="../images/astro.jpg"
                 />
                 <div
                     style={{
@@ -269,12 +279,8 @@ const IndexPage: React.FC<PageProps> = () => {
                     {/* Any content here will be centered in the component */}
                     <div className="grid" style={center}>
                         <div>
-                            <StaticImage src="../images/logo.png" alt="PDAO LOGO" />
+                            <StaticImage src="../images/icon.JPG" alt="PDAO LOGO" style={{maxWidth:windowWidth*0.3}}/>
                         </div>
-                        <div>
-                            <StaticImage src="../images/logoTitle.png" alt="PDAO FULL LOGO" />
-                        </div>
-
                     </div>
 
                 </div>
