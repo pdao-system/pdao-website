@@ -221,7 +221,9 @@ const IndexPage: React.FC<PageProps> = () => {
         setHeight(window.innerHeight);
         console.log(windowWidth)
     }
+
     React.useEffect(() => {
+        updateDimensions();
         window.addEventListener("resize", updateDimensions);
         return () => window.removeEventListener("resize", updateDimensions);
     }, []);
