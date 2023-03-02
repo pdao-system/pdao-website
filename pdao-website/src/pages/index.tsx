@@ -294,6 +294,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <main className="container">
                 <section ref={aboutRef}>
                     <hgroup>
+                        <h1 style={center}>PDAO</h1>
                         <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
                         <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
                         <p></p>
@@ -325,7 +326,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </section>
                 <section ref={infoRef}>
                     <hgroup>
-                        <h3 style={center}>活動資訊</h3>
+                        <h2 style={center}>活動資訊</h2>
                         <h5 style={center}>內容僅供參考，以<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">正式活動簡章</a>為準。</h5>
                     </hgroup>
 
@@ -438,7 +439,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </section>
                 <section ref={teamsRef}>
                     <hgroup>
-                        <h3 style={center}>錄取隊伍</h3>
+                        <h2 style={center}>錄取隊伍</h2>
                         <p></p>
                     </hgroup>
                     <table>
@@ -465,6 +466,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </section>
                 <section ref={contactRef}>
                     <hgroup>
+                        <h2 style={center}>聯絡我們</h2>
                         <h6 style={center}>如有任何疑問，歡迎來信洽詢：<a href="mailto: pdaopdao@ntu.im">pdaopdao@ntu.im</a></h6>
                         <h6 style={center}>Programming Design And Optimization Website</h6>
                         <h6 style={center}>Information Management, National Taiwan University</h6>
@@ -490,7 +492,7 @@ export const Head: HeadFC = () => (
         <meta name="description" content="2023 PDAO" />
         <meta name="keywords" content="PDAO Programming Design and Optimization" />
         <meta name="author" content="臺大資管系" />
-        <meta property="og:title" content="2023 PDAO"/>
+        <meta property="og:title" content="2023 PDAO" />
         <meta property="og:image" content="/favicon-32x32.png" />
         <meta property="og:url" content="https://pdaowebsite.gatsbyjs.io/" />
         <meta property="og:site_name" content="PDAO" />
