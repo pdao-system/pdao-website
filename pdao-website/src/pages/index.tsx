@@ -2,12 +2,12 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import "@picocss/pico/css/pico.min.css";
 import { StaticImage } from "gatsby-plugin-image"
-import PdaoImage from "./scenes/pdaoImage";
-import Info from "./scenes/info"
-import Navbar from "./scenes/navbar"
-import About from "./scenes/about"
-import Teams from "./scenes/teams"
-import Contact from "./scenes/contact"
+import PdaoImage from "../lib/scenes/pdaoImage";
+import Info from "../lib/scenes/info"
+import Navbar from "../lib/scenes/navbar"
+import About from "../lib/scenes/about"
+import Teams from "../lib/scenes/teams"
+import Contact from "../lib/scenes/contact"
 import info from "../data/info.json";
 
 const lastUpdate = new Date(info.lastUpdate);
