@@ -32,12 +32,15 @@ const IndexPage: React.FC<PageProps> = () => {
         setHeight(window.innerHeight);
         console.log(windowWidth)
     }
+    
 
     React.useEffect(() => {
         updateDimensions();
         window.addEventListener("resize", updateDimensions);
+        window.scrollTo(0,2000)
         return () => window.removeEventListener("resize", updateDimensions);
     }, []);
+
 
     return (
         <body style={{ "--spacing": "0.8rem", "prefers-color-scheme": "dark" , backgroundColor: 'rgb(29, 44, 63)'}}>

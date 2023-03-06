@@ -20,7 +20,9 @@ const PdaoImage = ({windowWidth}: PdaoImageProps) => {
     const galaxyRef = useRef(null)
     const part1Ref = useRef(null)
     
-    window.addEventListener('scroll', () => {
+    const isBrowser = () => typeof window !== "undefined"
+
+    isBrowser() && window.addEventListener('scroll', () => {
         let value = window.scrollY;
         
             // logoRef.current.style.transform = 'translateX('+value-400+
