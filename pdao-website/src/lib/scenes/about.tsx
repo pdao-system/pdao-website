@@ -14,9 +14,10 @@ const About = ({aboutRef, center}: AboutProps)=>{
                         <p></p>
                     </hgroup>
                     <p>
+                        
                         <div className="grid">
                             <div data-tooltip="披薩吃到飽">
-                                <StaticImage src="../../images/pizza.jpg" alt="pizza" aspectRatio={16 / 13} />
+                                <StaticImage src="../../images/pizza.png" alt="pizza" aspectRatio={13 / 13} />
                             </div>
                             <div data-tooltip="12道題目，難度不一">
                                 <StaticImage src="../../images/coding.jpg" alt="coding" aspectRatio={16 / 13} />
@@ -27,9 +28,7 @@ const About = ({aboutRef, center}: AboutProps)=>{
                         </div>
                     </p>
                     <div className="grid">
-                        <div data-tooltip="答對題目可獲得氣球">
-                            <StaticImage src="../../images/ballon.jpg" alt="ballon" aspectRatio={16 / 14} />
-                        </div>
+                        
                         <div data-tooltip="豐富獎品任君挑選">
                             <StaticImage src="../../images/win.jpg" alt="win" aspectRatio={16 / 14} transformOptions={{ cropFocus: "entropy" }} />
                         </div>

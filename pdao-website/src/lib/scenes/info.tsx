@@ -18,7 +18,7 @@ const Info = ({infoRef, center}: InfoProps)=>{
                     <div className="grid">
                         <div>
                             <article>
-                                <h6 style={center}><AiFillTrophy></AiFillTrophy>活動獎項</h6>
+                                <h6 style={{...center, color:'black'}} ><AiFillTrophy></AiFillTrophy>活動獎項</h6>
                                 <p>
                                     <small>積極參與獎：<br></br>
                                         所有參賽選手均可獲得PDOGS出品限量資料夾與參賽證明一份。
@@ -46,7 +46,7 @@ const Info = ({infoRef, center}: InfoProps)=>{
                         </div>
                         <div >
                             <article>
-                                <h6 style={center}><GiArchiveRegister></GiArchiveRegister>報名須知</h6>
+                                <h6 style={{...center, color:'black'}}><GiArchiveRegister></GiArchiveRegister>報名須知</h6>
                                 <p>
                                     <small>活動日期：2021/5/8(六) 8:30~18:00。</small>
                                 </p>
@@ -88,7 +88,7 @@ const Info = ({infoRef, center}: InfoProps)=>{
                         </div>
                         <div style={center}>
                             <article>
-                                <h6 style={center} ><RiFileInfoLine></RiFileInfoLine>競賽規則</h6>
+                                <h6 style={{...center, color:'black'}} ><RiFileInfoLine></RiFileInfoLine>競賽規則</h6>
                                 <p>
                                     <small>
                                         若違反下列規則，將可能導致參賽隊伍失去參賽或得獎資格。

@@ -18,6 +18,9 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
   const galaxyRef = useRef(null);
   const part1Ref = useRef(null);
   const rocketRef = useRef(null);
+  const astro1Ref = useRef(null);
+  const astro2Ref = useRef(null);
+  const part2Ref = useRef(null);
 
   const isBrowser = () => typeof window !== "undefined";
 
@@ -67,19 +70,135 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
           " translateY(" +
           (value * 2 - 1800) +
           "px)";
+          
+          part1Ref.current.style.opacity = (value - 2500.0)/500;
+          part1Ref.current.style.transform =
+          "translateX(-20vw)" + " translateY(" + (value * 0.8 + 1000) + "px)";
+
       } else if (4000 <= value && value <= 6500) {
+        
         moonRef.current.style.transform = "translateY(" + (value + 400) + "px)";
         part1Ref.current.style.transform =
-          "translateX(-20vw)" + " translateY(" + (value * 0.7 + 1600) + "px)";
-        part1Ref.current.style.opacity = (value - 4000.0) / 2500;
-        rocketRef.current.style.transform = "translateX("+(-value+4000+1500)+"px)" + " translateY(" + (value) + "px)"+ " rotate(" + (-(value -4000.0)/2500*360)+"deg)";
-        rocketRef.current.style.zIndex = 2
-        if(value >= 5000){
-            rocketRef.current.style.zIndex = 4
-            rocketRef.current.style.transform = "translateX("+500+"px)" + " translateY(" + (value*1.2 - 1000) + "px)"+ " rotate(" + (-(value -4000.0)/2500*360)+"deg)";
+          "translateX(-20vw)" + " translateY(" + (value * 0.8 + 1000) + "px)";
+        part2Ref.current.style.transform =
+          "translateX(25vw)" + " translateY(" + (value * 0.8 + 1000) + "px)";
+        part2Ref.current.style.opacity = (value - 4000.0)/500 
 
+        rocketRef.current.style.transform =
+          "translateX(" +
+          (-value + 4000 + 1500) +
+          "px)" +
+          " translateY(" +
+          value +
+          "px)" +
+          " rotate(" +
+          (-(value - 4000.0) / 2500) * 360 +
+          "deg)";
+        rocketRef.current.style.zIndex = 2;
+        if (value >= 5000) {
+          rocketRef.current.style.zIndex = 4;
+          rocketRef.current.style.transform =
+            "translateX(" +
+            500 +
+            "px)" +
+            " translateY(" +
+            (value * 1.2 - 1000) +
+            "px)" +
+            " rotate(" +
+            (-(value - 4000.0) / 2500) * 360 +
+            "deg)";
         }
+      } else if (6500 <= value && value <= 8000) {
+        astro2Ref.current.style.opacity = 0;
+        moonRef.current.style.transform = "translateY(" + (value + 400) + "px)";
+        rocketRef.current.style.transform =
+          "translateX(" +
+          500 +
+          "px)" +
+          " translateY(" +
+          (value + 6500 * 0.2 - 1000) +
+          "px)";
+        astro1Ref.current.style.opacity = (value - 6500.0) / 250;
+        astro1Ref.current.style.transform =
+          "translateX(" +
+          400 +
+          "px)" +
+          " translateY(" +
+          (value + 6500 * 0.2 - 1000) +
+          "px)";
+        if (value <= 7000 && value >= 6750) {
+          astro1Ref.current.style.opacity = (7000.0 - value) / 250;
+        } else if (value <= 7250 && value >= 7000) {
+          astro1Ref.current.style.opacity = (value - 7000.0) / 250;
+          astro1Ref.current.style.transform =
+            "translateX(" +
+            300 +
+            "px)" +
+            " translateY(" +
+            (value + 6500 * 0.2 - 1000) +
+            "px)";
+        } else if (value <= 7500 && value >= 7250) {
+          astro1Ref.current.style.opacity = (7500.0 - value) / 250;
+          astro1Ref.current.style.transform =
+            "translateX(" +
+            300 +
+            "px)" +
+            " translateY(" +
+            (value + 6500 * 0.2 - 1000) +
+            "px)";
+        } else if (value <= 7750 && value >= 7500) {
+          astro1Ref.current.style.opacity = (value - 7500.0) / 250;
+          astro1Ref.current.style.transform =
+            "translateX(" +
+            200 +
+            "px)" +
+            " translateY(" +
+            (value + 6500 * 0.2 - 1000) +
+            "px)";
+        } else if (value <= 8000 && value >= 7750) {
+          astro1Ref.current.style.opacity = (8000.0 - value) / 250;
+          astro1Ref.current.style.transform =
+            "translateX(" +
+            200 +
+            "px)" +
+            " translateY(" +
+            (value + 6500 * 0.2 - 1000) +
+            "px)";
+        }
+        astro2Ref.current.style.transform =
+          "translateX(" +
+          200 +
+          "px)" +
+          " translateY(" +
+          (value + 6500 * 0.2 - 1000) +
+          "px)";
+      } else if (8000 <= value && value <= 9000) {
+        astro1Ref.current.style.opacity = 0;
+
+        astro2Ref.current.style.transform =
+          "translateX(" +
+          200 +
+          "px)" +
+          " translateY(" +
+          (value + 6500 * 0.2 - 1100) +
+          "px)";
+        moonRef.current.style.transform = "translateY(" + (value + 400) + "px)";
+        rocketRef.current.style.transform =
+          "translateX(" +
+          500 +
+          "px)" +
+          " translateY(" +
+          (value + 6500 * 0.2 - 1000) +
+          "px)";
+        if (value <= 8250) {
+          astro2Ref.current.style.opacity = (value - 8000.0) / 250;
+        }
+      } else if(value >= 9000){
+        moonRef.current.style.opacity = (-value+9200.00)/200
+        rocketRef.current.style.opacity = (-value+9200.00)/200
+        astro2Ref.current.style.opacity = (-value+9200.00)/200
       }
+
     });
 
   return (
@@ -176,7 +295,7 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
             position: "absolute",
             color: "white",
             fontSize: "0.8rem",
-            transform: "translateX(-20vw) translateY(200px) ",
+            transform: "translateX(-20vw) translateY(-300px) ",
             opacity: 0,
           }}
         >
@@ -231,18 +350,88 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
           文案｜顧寬証
           <br />-
         </div>
+
+        <div
+          ref={part2Ref}
+          style={{
+            maxWidth: windowWidth * 0.4,
+            position: "absolute",
+            color: "white",
+            fontSize: "0.8rem",
+            transform: "translateX(-20vw) translateY(200px) ",
+            opacity: 0,
+          }}
+        >
+          【太空任務日誌．代號 S04】第二部／二部 ∙主線目標｜尋找潛在人類適居星球<br/>
+          ∙參與人員｜鈦空郎 上校、史貝斯 上士、史達 中士、普雷尼特 中士<br/>
+          ∙服役載具｜批狗號 壹代太空船<br/>
+          ∙日誌時間｜西元貳壹貳參年伍月壹日 格林威治標準時間拾捌時<br/>
+          <br/>
+          （轟隆——）自動駕駛的失靈導致一顆隕石扎實地撞在船身。鈦空郎扶著圓桌從地面緩緩站起，環顧四周。雖然機組人員皆無大礙，但駕駛艙失去了控制。<br/>
+          <br/>
+          「艦長，我們正高速朝向未知星球墜落，估計一分鐘後進入大氣層。考量現行速度及大氣層厚度，船體墜地時速度將高達數百公里。」面對生死關頭，史貝斯不得不冷靜分析<br/>
+          <br/>
+          鈦空郎眉頭緊皺不發一語，手中的任務文件已被揉成團狀。他高速運轉的腦中早已有了最佳決策，但卻難以開口。批狗號身為老舊的二代太空船，全船只配備一個逃生船。以時數數百公里墜地，即使倖存，也無法脫離星球。必須有一人回到太空站，駕駛新型太空船救援其餘墜落成員。
+          「我上逃生艙吧！」史達似乎明白了<br/>
+          <br/>
+          鈦空郎表示很慶幸自己不用做承擔壓力的那個人，想都沒想就帶著史達匆匆離開駕駛艙，跑向逃生船。<br/>
+          <br/>
+          「在這，快進去！再見，我相信你。」鈦空郎指著逃生船並對史達說<br/>
+          <br/>
+          「再見。」史達意味深長的回道，卻站在原地不動<br/>
+          <br/>
+          鈦空郎愣住了，還沒回過神，就被史達一把推入逃生船，並關上艙門。<br/>
+          <br/>
+          「我們也相信你。」（咻——）史達按下噴射鈕，將希望都寄託在艦長身上。<br/>
+          <br/>
+          代號 S04 太空任務，僅艦長一人返回太空站，其餘機組人員失聯，生死未卜。<br/>
+          <br/>
+          ===<br/>
+          <br/>
+          製圖｜陳巧蓉<br/>
+          文案｜顧寬証<br/>
+          
+        </div>
+
         <div
           ref={rocketRef}
           style={{
-            
-            width: '20rem',
-            height: '20rem',
+            width: "20rem",
+            height: "20rem",
             position: "absolute",
             transform: "",
             zIndex: 2,
           }}
         >
           <StaticImage src="../../images/rocket.PNG" alt="rocket"></StaticImage>
+        </div>
+
+        <div
+          ref={astro1Ref}
+          style={{
+            width: "20rem",
+            height: "20rem",
+            position: "absolute",
+            transform: "",
+            opacity: 0,
+            zIndex: 5,
+          }}
+        >
+          <StaticImage src="../../images/astro1.PNG" alt="astro1"></StaticImage>
+        </div>
+
+        <div
+          ref={astro2Ref}
+          style={{
+            width: "30rem",
+            height: "30rem",
+            position: "absolute",
+            transform: "",
+            opacity: 0,
+            zIndex: 5,
+          }}
+        >
+          <StaticImage src="../../images/astro2.PNG" alt="astro2"></StaticImage>
         </div>
       </div>
     </div>

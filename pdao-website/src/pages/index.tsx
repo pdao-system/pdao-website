@@ -16,6 +16,7 @@ const center = {
     width: '100%',
     display: "flex",
     justifyContent: "center",
+    color: "white",
 }
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -48,7 +49,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 {/* You can use a GatsbyImage component if the image is dynamic */}
             <PdaoImage windowWidth={windowWidth}></PdaoImage>
             <main className="container">
-                <div style={{height: '10000px', scrollBehavior:'smooth'}}></div>
+                <div style={{height: '11000px', scrollBehavior:'smooth'}}></div>
                 <About aboutRef={aboutRef} center={center}></About>
                 <Info infoRef={infoRef} center={center}></Info>
                 <Teams teamsRef={teamsRef} center={center}></Teams>

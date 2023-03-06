@@ -11,21 +11,21 @@ const Teams = ({teamsRef, center}: TeamsProps)=>{
                         <h2 style={center}>錄取隊伍</h2>
                         <p></p>
                     </hgroup>
-                    <table>
+                    <table >
                         <thead>
                             <tr style={{ justifyContent: "center" }}>
-                                <th scope="col">#</th>
-                                <th scope="col">隊名</th>
-                                <th scope="col">成員</th>
+                                <th scope="col" style={{color: 'white'}}>#</th>
+                                <th scope="col" style={{color: 'white'}}>隊名</th>
+                                <th scope="col" style={{color: 'white'}}>成員</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                                 teams.map((team, i) => {
-                                    return <tr>
-                                        <th scope="row">{i + 1}</th>
-                                        <td>{team.name}</td>
-                                        <td>{team.members.join(' ')}</td>
+                                    return <tr key={i}>
+                                        <th scope="row" style={{color: 'white'}}>{i + 1}</th>
+                                        <td style={{color: 'white'}}>{team.name}</td>
+                                        <td style={{color: 'white'}}>{team.members.join(' ')}</td>
                                     </tr>
                                 })
                             }
