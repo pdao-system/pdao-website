@@ -18,14 +18,13 @@ const PdaoImage = ({windowWidth}: PdaoImageProps) => {
     const moonRef = useRef(null)
     const starsRef = useRef(null)
     const galaxyRef = useRef(null)
-    
+
     window.addEventListener('scroll', () => {
         let value = window.scrollY;
         
             // logoRef.current.style.transform = 'translateX('+value-400+
             console.log(value)
             if(value <= 2000){
-                
                 logoRef.current.style.transform = 'translateX('+(value*0.5-1000)+'px)'+' translateY('+(value*1+200)+'px)'
                 moonRef.current.style.transform = 'translateY('+(value*0.8+1000)+'px)'
                 starsRef.current.style.transform = 'translateX('+(value*0.2-1000)+'px)'+' translateY('+(value*1.2-200)+'px)'
