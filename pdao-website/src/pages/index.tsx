@@ -40,11 +40,12 @@ const IndexPage: React.FC<PageProps> = () => {
     }, []);
 
     return (
-        <body style={{ "--spacing": "0.8rem", "prefers-color-scheme": "dark" }}>
+        <body style={{ "--spacing": "0.8rem", "prefers-color-scheme": "dark" , backgroundColor: 'rgb(29, 44, 63)'}}>
             <Navbar aboutRef={aboutRef} infoRef={infoRef} teamsRef={teamsRef}  contactRef={contactRef} ></Navbar>
                 {/* You can use a GatsbyImage component if the image is dynamic */}
             <PdaoImage windowWidth={windowWidth}></PdaoImage>
             <main className="container">
+                <div style={{height: '5000px', scrollBehavior:'smooth'}}></div>
                 <About aboutRef={aboutRef} center={center}></About>
                 <Info infoRef={infoRef} center={center}></Info>
                 <Teams teamsRef={teamsRef} center={center}></Teams>
