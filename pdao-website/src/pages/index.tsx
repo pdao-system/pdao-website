@@ -99,7 +99,7 @@ export const Head: HeadFC = () => (
         <meta property="og:url" content="https://pdaowebsite.gatsbyjs.io/" />
         <meta property="og:site_name" content="PDAO" />
         <meta property="og:description" content="Programming Design and Optimization, coding contest held by NTUIM." />
-        <title>2023 PDAO - 台灣大學資管系學生會</title>
+        <title>2023 PDAO - 臺灣大學資管系學生會</title>
         <meta name="google-site-verification" content="m0P1Lsy3xq5qQ88rESu0nzvo2RkWDCV-KGVxe_lit_Y" />
     </>
 )
