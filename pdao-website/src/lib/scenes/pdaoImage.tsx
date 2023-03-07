@@ -313,7 +313,7 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
             maxWidth: windowWidth * 0.4,
             position: "absolute",
             color: "white",
-            fontSize: "0.8rem",
+            fontSize: "1rem",
             transform: "translateX(-20vw) translateY(-300px) ",
             opacity: 0,
           }}
@@ -376,7 +376,7 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
             maxWidth: windowWidth * 0.4,
             position: "absolute",
             color: "white",
-            fontSize: "0.8rem",
+            fontSize: "1rem",
             transform: "translateX(-20vw) translateY(200px) ",
             opacity: 0,
           }}
@@ -448,6 +448,7 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
             transform: "",
             opacity: 0,
             zIndex: 5,
+            color: "white"
           }}
         >
           <StaticImage src="../../images/astro2.PNG" alt="astro2"></StaticImage>

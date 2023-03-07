@@ -10,7 +10,6 @@ import Teams from "../lib/scenes/teams";
 import Contact from "../lib/scenes/contact";
 import info from "../data/info.json";
 import useMediaQuery from '@mui/material/useMediaQuery';
-
 const lastUpdate = new Date(info.lastUpdate);
 
 const center = {
@@ -64,9 +63,14 @@ const IndexPage: React.FC<PageProps> = () => {
       ></Navbar>
       {/* You can use a GatsbyImage component if the image is dynamic */}
       <PdaoImage windowWidth={windowWidth}></PdaoImage>
+      
       <main className="container">
-        {isNonMobileScreens ? <div style={{ height: "11000px", scrollBehavior: "smooth" }}></div>: <></>}
-
+        {isNonMobileScreens ? <div style={{ height: "10000px", scrollBehavior: "smooth" }}></div>: <></>}
+        <h1 style={{...center, fontSize: '2rem'}}>更多內容請至官方ig...</h1>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <About aboutRef={aboutRef} center={center}></About>
         <Info infoRef={infoRef} center={center}></Info>
         <Teams teamsRef={teamsRef} center={center}></Teams>
