@@ -83,28 +83,19 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => (
-  <>
-    <meta charSet="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。"
-    />
-    <meta name="keywords" content="PDAO Programming Design and Optimization" />
-    <meta name="author" content="臺大資管系" />
-    <meta property="og:title" content="2023 PDAO" />
-    <meta property="og:image" content="/favicon-32x32.png" />
-    <meta property="og:url" content="https://pdaowebsite.gatsbyjs.io/" />
-    <meta property="og:site_name" content="PDAO" />
-    <meta
-      property="og:description"
-      content="Programming Design and Optimization, coding contest held by NTUIM."
-    />
-    <title>2023 PDAO - 台灣大學資管系學生會</title>
-    <meta
-      name="google-site-verification"
-      content="m0P1Lsy3xq5qQ88rESu0nzvo2RkWDCV-KGVxe_lit_Y"
-    />
-  </>
-);
+    <>
+        <meta charSet="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。" />
+        <meta name="keywords" content="PDAO Programming Design and Optimization" />
+        <meta name="author" content="臺大資管系" />
+        <meta property="og:title" content="2023 PDAO" />
+        <meta property="og:image" content="/favicon-32x32.png" />
+        <meta property="og:url" content="https://pdaowebsite.gatsbyjs.io/" />
+        <meta property="og:site_name" content="PDAO" />
+        <meta property="og:description" content="Programming Design and Optimization, coding contest held by NTUIM." />
+        <title>2023 PDAO - 台灣大學資管系學生會</title>
+        <meta name="google-site-verification" content="m0P1Lsy3xq5qQ88rESu0nzvo2RkWDCV-KGVxe_lit_Y" />
+    </>
+)
