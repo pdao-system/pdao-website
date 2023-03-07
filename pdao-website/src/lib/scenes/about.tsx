@@ -112,7 +112,7 @@ const ImagesSilder = ({aboutRef, center}: AboutProps) => {
                     />
                 ))}
             </div>
-            <h1 style={center}>相官：資管 B07 施芊羽</h1>
+            <h6 style={center}>相官：資管 B07 施芊羽</h6>
 
         </section>
     )

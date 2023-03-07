@@ -17,7 +17,7 @@ const center = {
   display: "flex",
   justifyContent: "center",
   color: "white",
-  fontSize: "0.8rem"
+  
 };
 
 const IndexPage: React.FC<PageProps> = () => {
