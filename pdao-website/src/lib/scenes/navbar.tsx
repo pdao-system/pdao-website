@@ -1,5 +1,5 @@
 import React, { RefObject } from "react";
-
+import useMediaQuery from "@mui/material/useMediaQuery";
 interface NavbarProps {
   aboutRef: RefObject<HTMLSelectElement>;
   infoRef: RefObject<HTMLSelectElement>;
@@ -13,6 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({
   teamsRef,
   contactRef,
 }: NavbarProps) => {
+  const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   return (
     <nav
       className="container-fluid"
@@ -22,11 +23,12 @@ const Navbar: React.FC<NavbarProps> = ({
         backgroundColor: "white",
         zIndex: 99,
         boxShadow: "0 1px 0 var(--nav-border-color)",
+        
       }}
     >
       <ul>
         <li>
-          <a onClick={() => aboutRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>
+          <a onClick={() => window.scrollTo({'behavior': 'smooth', 'top': isNonMobileScreens ? 2000 : 0,'left': 0})} style={{fontSize: '0.5rem'}}>
             PDAO 2023
           </a>
         </li>

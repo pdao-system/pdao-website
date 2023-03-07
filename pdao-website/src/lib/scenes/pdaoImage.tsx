@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useRef } from "react";
-
+import useMediaQuery from "@mui/material/useMediaQuery";
 const center = {
   width: "100%",
   display: "flex",
@@ -12,6 +12,17 @@ interface PdaoImageProps {
 }
 
 const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
+
+    const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+    if(!isNonMobileScreens){
+        return (
+            <div style={{height: '850px', alignItems: 'center', display: 'flex'}}>
+                <div style={{}}>
+                    <StaticImage src="../../images/logo_vertical.PNG" alt="logo"></StaticImage> 
+                </div>
+            </div>
+        )
+    }
   const logoRef = useRef(null);
   const moonRef = useRef(null);
   const starsRef = useRef(null);
@@ -55,6 +66,14 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
           (value * 1.2 - 1100) +
           "px)";
       } else if (2000 <= value && value <= 4000) {
+        if(value <= 2100){
+          console.log('!')
+          moonRef.current.style.opacity = 1
+          rocketRef.current.style.opacity = 1
+          // astro1Ref.current.style.opacity = 1
+          // astro2Ref.current.style.opacity = 1
+        }
+        
         logoRef.current.style.transform =
           "translateX(" +
           0 +
