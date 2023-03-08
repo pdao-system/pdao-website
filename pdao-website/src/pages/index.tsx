@@ -10,22 +10,29 @@ import Teams from "../lib/scenes/teams";
 import Contact from "../lib/scenes/contact";
 import info from "../data/info.json";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Sponsor from "../lib/scenes/sponsor";
 const lastUpdate = new Date(info.lastUpdate);
+
+
 
 const center = {
   width: "100%",
   display: "flex",
   justifyContent: "center",
-  color: "white",
+  alignItems: "center"
+  
   
 };
 
 const IndexPage: React.FC<PageProps> = () => {
+  
+ 
   const aboutRef = React.useRef<null | HTMLSelectElement>(null);
 
   const infoRef = React.useRef<null | HTMLSelectElement>(null);
   const teamsRef = React.useRef<null | HTMLSelectElement>(null);
   const contactRef = React.useRef<null | HTMLSelectElement>(null);
+  const sponsorsRef = React.useRef<null | HTMLSelectElement>(null);
 
   const [windowWidth, setWidth] = React.useState(0);
   const [windowHeight, setHeight] = React.useState(0);
@@ -66,7 +73,7 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <main className="container">
         {isNonMobileScreens ? <div style={{ height: "10000px", scrollBehavior: "smooth" }}></div>: <></>}
-        <h1 style={{...center, fontSize: '2rem'}}>更多內容請至官方ig...</h1>
+        <h1 style={{...center, fontSize: '2rem', color: 'white'}}>更多內容請至官方ig...</h1>
         <br></br>
         <br></br>
         <br></br>
@@ -79,6 +86,8 @@ const IndexPage: React.FC<PageProps> = () => {
           center={center}
           lastUpdate={lastUpdate}
         ></Contact>
+        
+        <Sponsor SponsorRef={sponsorsRef} center={center} ></Sponsor>
       </main>
     </body>
   );

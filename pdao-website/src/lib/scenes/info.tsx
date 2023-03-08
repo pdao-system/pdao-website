@@ -1,8 +1,7 @@
 import React, {RefObject, CSSProperties} from 'react';
 import { GiArchiveRegister } from "react-icons/gi"
-import { AiFillTrophy } from "react-icons/ai"
-import { RiFileInfoLine } from "react-icons/ri"
-
+import { AiFillHighlight, AiFillTrophy } from "react-icons/ai"
+import { AiFillFolder } from "react-icons/ai"
 interface InfoProps {
     infoRef: RefObject<HTMLSelectElement>,
     center: CSSProperties,
@@ -11,14 +10,14 @@ const Info = ({infoRef, center}: InfoProps)=>{
     return (
         <section ref={infoRef}>
                     <hgroup>
-                        <h2 style={center}>活動資訊</h2>
-                        <h5 style={center}>內容僅供參考，以<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">正式活動簡章</a>為準。</h5>
+                        <h2 style ={{...center, color: "white"}}>活動資訊</h2>
+                        <h5 style ={{...center, color: "white"}}>內容僅供參考，以<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">正式活動簡章</a>為準。</h5>
                     </hgroup>
 
-                    <div className="grid">
+                    <div className="grid" style={{alignItems: 'baseline'}}>
                         <div>
-                            <article>
-                                <h6 style={{...center, color:'black'}} ><AiFillTrophy></AiFillTrophy>活動獎項</h6>
+                            <article >
+                                <h3 style={center} ><AiFillTrophy></AiFillTrophy>活動獎項</h3>
                                 <p>
                                     <small>積極參與獎：<br></br>
                                         所有參賽選手均可獲得PDOGS出品限量資料夾與參賽證明一份。
@@ -46,7 +45,7 @@ const Info = ({infoRef, center}: InfoProps)=>{
                         </div>
                         <div >
                             <article>
-                                <h6 style={{...center, color:'black'}}><GiArchiveRegister></GiArchiveRegister>報名須知</h6>
+                                <h3 style={center}><GiArchiveRegister></GiArchiveRegister>報名須知</h3>
                                 <p>
                                     <small>活動日期：2021/5/8(六) 8:30~18:00。</small>
                                 </p>
@@ -88,7 +87,7 @@ const Info = ({infoRef, center}: InfoProps)=>{
                         </div>
                         <div style={center}>
                             <article>
-                                <h6 style={{...center, color:'black'}} ><RiFileInfoLine></RiFileInfoLine>競賽規則</h6>
+                                <h3 style={center} ><AiFillFolder></AiFillFolder>競賽規則</h3>
                                 <p>
                                     <small>
                                         若違反下列規則，將可能導致參賽隊伍失去參賽或得獎資格。

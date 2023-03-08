@@ -4,11 +4,12 @@ interface TeamsProps {
     teamsRef: RefObject<HTMLSelectElement>,
     center: CSSProperties,
 }
+
 const Teams = ({teamsRef, center}: TeamsProps)=>{
     return (
         <section ref={teamsRef}>
                     <hgroup>
-                        <h2 style={center}>錄取隊伍</h2>
+                        <h2 style ={{...center, color: "white"}}>錄取隊伍</h2>
                         <p></p>
                     </hgroup>
                     <table >
