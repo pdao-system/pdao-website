@@ -56,9 +56,9 @@ const ImagesSilder = ({aboutRef, center}: AboutProps) => {
     return (
         <section ref={aboutRef}>
             <hgroup>
-                        <h1 style={center}>PDAO</h1>
-                        <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
-                        <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
+                        <h1 style={{...center, color: 'white'}}>PDAO</h1>
+                        <h5 style={{...center, color: 'white'}}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
+                        <h5 style={{...center, color: 'white'}}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
                         <p></p>
             </hgroup>
             
