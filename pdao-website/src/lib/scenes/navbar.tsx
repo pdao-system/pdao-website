@@ -5,6 +5,7 @@ interface NavbarProps {
   infoRef: RefObject<HTMLSelectElement>;
   teamsRef: RefObject<HTMLSelectElement>;
   contactRef: RefObject<HTMLSelectElement>;
+  sponsorsRef: RefObject<HTMLSelectElement>;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
@@ -12,6 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({
   infoRef,
   teamsRef,
   contactRef,
+  sponsorsRef
 }: NavbarProps) => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   return (
@@ -26,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({
         
       }}
     >
-      <ul>
+      <ul style={{overflow: 'scroll'}}>
         <li>
           <a onClick={() => window.scrollTo({'behavior': 'smooth', 'top': isNonMobileScreens ? 2000 : 0,'left': 0})} style={{fontSize: '0.5rem'}}>
             PDAO 2023
@@ -38,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </a>
         </li>
         <li>
-          <a onClick={() => infoRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>
+          <a onClick={() => infoRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>
             活動資訊
           </a>
         </li>
@@ -47,10 +49,15 @@ const Navbar: React.FC<NavbarProps> = ({
             錄取隊伍
           </a>
         </li>
+        <li>
+          <a onClick={() => sponsorsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>
+            贊助名單
+          </a>
+        </li>
       </ul>
       <ul>
         <li>
-          <a onClick={() => contactRef.current?.scrollIntoView({ behavior: "smooth" })}>聯絡我們</a>
+          <a onClick={() => contactRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>聯絡我們</a>
         </li>
       </ul>
     </nav>

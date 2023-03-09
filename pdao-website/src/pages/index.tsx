@@ -67,6 +67,7 @@ const IndexPage: React.FC<PageProps> = () => {
         infoRef={infoRef}
         teamsRef={teamsRef}
         contactRef={contactRef}
+        sponsorsRef={sponsorsRef}
       ></Navbar>
       {/* You can use a GatsbyImage component if the image is dynamic */}
       <PdaoImage windowWidth={windowWidth}></PdaoImage>
