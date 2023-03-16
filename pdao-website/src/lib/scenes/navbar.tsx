@@ -35,29 +35,29 @@ const Navbar: React.FC<NavbarProps> = ({
           </a>
         </li>
         <li>
-          <a onClick={() => aboutRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>
+          <a onClick={() => aboutRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>
             介紹
           </a>
         </li>
         <li>
-          <a onClick={() => infoRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>
+          <a onClick={() => infoRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>
             活動資訊
           </a>
         </li>
         <li>
-          <a onClick={() => teamsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>
+          <a onClick={() => teamsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>
             錄取隊伍
           </a>
         </li>
         <li>
-          <a onClick={() => sponsorsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>
+          <a onClick={() => sponsorsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>
             贊助名單
           </a>
         </li>
       </ul>
       <ul>
         <li>
-          <a onClick={() => contactRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}>聯絡我們</a>
+          <a onClick={() => contactRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>聯絡我們</a>
         </li>
       </ul>
     </nav>
