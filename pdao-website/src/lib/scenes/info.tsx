@@ -97,6 +97,7 @@ const Info = ({ infoRef, center }: InfoProps) => {
                 <li>上述資格外之大學在學學生</li>
               </ol>
             </small>
+            <a href="https://www.facebook.com/groups/6579141708782117/">找不到隊友？</a>
           </article>
         </div>
         <div>
