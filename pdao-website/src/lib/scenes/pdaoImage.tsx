@@ -13,7 +13,7 @@ interface PdaoImageProps {
 
 const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
 
-    const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+    const isNonMobileScreens = useMediaQuery("(min-width:10000px)");
     if(!isNonMobileScreens){
         return (
             <div style={{height: '850px', alignItems: 'center', display: 'flex'}}>

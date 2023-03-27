@@ -42,7 +42,7 @@ const IndexPage: React.FC<PageProps> = () => {
     console.log(windowWidth);
   };
 
-  const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+  const isNonMobileScreens = useMediaQuery("(min-width:10000px)");
 
   React.useEffect(() => {
     updateDimensions();

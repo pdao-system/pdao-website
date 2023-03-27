@@ -15,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({
   contactRef,
   sponsorsRef
 }: NavbarProps) => {
-  const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+  const isNonMobileScreens = useMediaQuery("(min-width:10000px)");
   return (
     <nav
       className="container-fluid"
