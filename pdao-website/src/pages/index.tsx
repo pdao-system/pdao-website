@@ -74,11 +74,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
       <main className="container">
         {isNonMobileScreens ? <div style={{ height: "10000px", scrollBehavior: "smooth" }}></div> : <></>}
-        <h1 style={{ ...center, fontSize: '2rem', color: 'white' }}>更多內容請至官方ig...</h1>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <About aboutRef={aboutRef} center={center}></About>
         <Info infoRef={infoRef} center={center}></Info>
         <Teams teamsRef={teamsRef} center={center}></Teams>
@@ -88,6 +83,7 @@ const IndexPage: React.FC<PageProps> = () => {
           center={center}
           lastUpdate={lastUpdate}
         ></Contact>
+        <h1 style={{ ...center, fontSize: '2rem', color: 'white' }}>更多內容請至官方ig...</h1>
       </main>
     </body>
   );

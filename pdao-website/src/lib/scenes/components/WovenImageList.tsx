@@ -5,7 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 export default function MasonryImageList() {
   return (
-    <Box sx={{ width: 500, height: 450}}>
+    <Box sx={{ maxWidth: 0.5 }}>
       <ImageList variant="masonry" gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -39,6 +39,6 @@ const itemData = [
     img: 'https://cdn.discordapp.com/attachments/1062631762204839956/1082575152413425664/Emblem72.png',
     title: 'Books',
   },
-  
-  
+
+
 ];

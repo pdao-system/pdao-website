@@ -1,4 +1,4 @@
-import React, {RefObject, CSSProperties, useEffect} from 'react';
+import React, { RefObject, CSSProperties, useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Radio from '@mui/material/Radio';
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -6,114 +6,112 @@ interface AboutProps {
     aboutRef: RefObject<HTMLSelectElement>,
     center: CSSProperties,
 }
-const About = ({aboutRef, center}: AboutProps)=>{
+const About = ({ aboutRef, center }: AboutProps) => {
     return (
         <section ref={aboutRef}>
-                    <hgroup>
-                        <h1 style={center}>PDAO</h1>
-                        <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
-                        <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
-                        <p></p>
-                    </hgroup>
-                    <p>
-                        
-                        <div className="grid">
-                            <div data-tooltip="披薩吃到飽">
-                                <StaticImage src="../../images/pizza.png" alt="pizza" aspectRatio={13 / 13} />
-                            </div>
-                            <div data-tooltip="12道題目，難度不一">
-                                <StaticImage src="../../images/coding.jpg" alt="coding" aspectRatio={16 / 13} />
-                            </div>
-                            <div data-tooltip="企業參訪">
-                                <StaticImage src="../../images/company.jpg" alt="company" aspectRatio={16 / 13} />
-                            </div>
-                        </div>
-                    </p>
-                    <div className="grid">
-                        
-                        <div data-tooltip="豐富獎品任君挑選">
-                            <StaticImage src="../../images/win.jpg" alt="win" aspectRatio={16 / 14} transformOptions={{ cropFocus: "entropy" }} />
-                        </div>
-                        <div data-tooltip="與隊友腦力激盪">
-                            <StaticImage src="../../images/friend.jpg" alt="friend" aspectRatio={16 / 14} />
-                        </div>
+            <hgroup>
+                <h1 style={center}>PDAO</h1>
+                <h5 style={center}>全名 Programming Design and Optimization ，是國立臺灣大學資訊管理學系不分年級的大型程式競賽。</h5>
+                <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
+                <p></p>
+            </hgroup>
+            <p>
+
+                <div className="grid">
+                    <div data-tooltip="披薩吃到飽">
+                        <StaticImage src="../../images/pizza.png" alt="pizza" aspectRatio={13 / 13} />
                     </div>
-                </section>
+                    <div data-tooltip="12道題目，難度不一">
+                        <StaticImage src="../../images/coding.jpg" alt="coding" aspectRatio={16 / 13} />
+                    </div>
+                    <div data-tooltip="企業參訪">
+                        <StaticImage src="../../images/company.jpg" alt="company" aspectRatio={16 / 13} />
+                    </div>
+                </div>
+            </p>
+            <div className="grid">
+
+                <div data-tooltip="豐富獎品任君挑選">
+                    <StaticImage src="../../images/win.jpg" alt="win" aspectRatio={16 / 14} transformOptions={{ cropFocus: "entropy" }} />
+                </div>
+                <div data-tooltip="與隊友腦力激盪">
+                    <StaticImage src="../../images/friend.jpg" alt="friend" aspectRatio={16 / 14} />
+                </div>
+            </div>
+        </section>
     )
 }
 
 
 
-const ImagesSilder = ({aboutRef, center}: AboutProps) => {
+const ImagesSilder = ({ aboutRef, center }: AboutProps) => {
     const [selectedValue, setSelectedValue] = React.useState('241');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(event.target.value);
-      };
-      const radioButtons = ['241', '254', '274', '279', '283', '290', '309', '314', '318', '324']
-      
+    };
+    const radioButtons = ['241', '254', '274', '279', '283', '290', '309', '314', '318', '324']
+
 
     return (
         <section ref={aboutRef}>
             <hgroup>
-                        <h1 style={{...center, color: 'white'}}>PDAO</h1>
-                        <h6 style={{...center, color: 'white'}}>全名 Programming Design and Optimization ，是由國立臺灣大學資訊管理學系主辦，每年 4、5 月舉辦一次的大型程式競賽，旨在讓參賽者能藉由競賽，測驗其資料結構和演算法知識及程式撰寫等能力，並累積實戰經驗。<br></br>
-                        舉不分年級的參賽資格，讓每位程式愛好者都有機會參與，一同挑戰自我，邁向更高的程式設計境界。</h6>
+                <h1 style={{ ...center, color: 'white' }}>PDAO</h1>
+                <h6 style={{ ...center, color: 'white' }}>全名 Programming Design and Optimization ，是由國立臺灣大學資訊管理學系主辦，每年 4、5 月舉辦一次的大型程式競賽，旨在讓參賽者能藉由競賽，測驗其資料結構和演算法知識及程式撰寫等能力，並累積實戰經驗。<br></br>
+                    舉不分年級的參賽資格，讓每位程式愛好者都有機會參與，一同挑戰自我，邁向更高的程式設計境界。</h6>
 
-                        
+
             </hgroup>
-            
-            {radioButtons.map((num,i)=>{
-                if(selectedValue !== num) return null;
-                if(selectedValue === '241'){
-                    return <StaticImage src={"../../images/241.jpg"} alt="image" style={{transition: '2s'}}></StaticImage>
-                } else if(selectedValue === '254'){
+            {radioButtons.map((num, i) => {
+                if (selectedValue !== num) return null;
+                if (selectedValue === '241') {
+                    return <StaticImage src={"../../images/241.jpg"} alt="image" style={{ transition: '2s' }}></StaticImage>
+                } else if (selectedValue === '254') {
                     return <StaticImage src={"../../images/254.jpg"} alt="image"></StaticImage>
-                } else if(selectedValue === '274'){
+                } else if (selectedValue === '274') {
                     return <StaticImage src={"../../images/274.jpg"} alt="image"></StaticImage>
-                } 
-                else if(selectedValue === '279'){
+                }
+                else if (selectedValue === '279') {
                     return <StaticImage src={"../../images/279.jpg"} alt="image"></StaticImage>
-                } 
-                else if(selectedValue === '283'){
+                }
+                else if (selectedValue === '283') {
                     return <StaticImage src={"../../images/283.jpg"} alt="image"></StaticImage>
-                } 
-                else if(selectedValue === '290'){
+                }
+                else if (selectedValue === '290') {
                     return <StaticImage src={"../../images/290.jpg"} alt="image"></StaticImage>
-                } 
-                else if(selectedValue === '309'){
+                }
+                else if (selectedValue === '309') {
                     return <StaticImage src={"../../images/309.jpg"} alt="image"></StaticImage>
-                } else if(selectedValue === '314'){
+                } else if (selectedValue === '314') {
                     return <StaticImage src={"../../images/314.jpg"} alt="image"></StaticImage>
-                } 
-                else if(selectedValue === '318'){
+                }
+                else if (selectedValue === '318') {
                     return <StaticImage src={"../../images/318.jpg"} alt="image"></StaticImage>
-                } 
-                else if(selectedValue === '324'){
+                }
+                else if (selectedValue === '324') {
                     return <StaticImage src={"../../images/324.jpg"} alt="image"></StaticImage>
-                } 
-                
+                }
+
             })}
-           
-            <div style={{ justifyContent: 'space-between', display: 'flex'}}>
-            
+
+            <div style={{ justifyContent: 'space-evenly', overflowX: "auto", display: 'flex' }}>
+
                 {radioButtons.map((value, index) => (
                     <Radio
-                    key={index}
-                    checked={selectedValue === value}
-                    onChange={handleChange}
-                    value={value}
-                    name="radio-buttons"
-                    inputProps={{ 'aria-label': value }}
-                    color={'primary'}
-                    sx={{
-                        color: 'white',
-                        
-                    }}
+                        key={index}
+                        checked={selectedValue === value}
+                        onChange={handleChange}
+                        value={value}
+                        name="radio-buttons"
+                        inputProps={{ 'aria-label': value }}
+                        color={'primary'}
+                        sx={{
+                            color: 'white',
+                        }}
                     />
                 ))}
             </div>
-            <h6 style ={{...center, color: "white"}}>相官：資管 B07 施芊羽</h6>
+            <h6 style={{ ...center, color: "white" }}>相官：資管 B07 施芊羽</h6>
 
         </section>
     )

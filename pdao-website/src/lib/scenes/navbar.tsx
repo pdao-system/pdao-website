@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({
       style={{
         position: "fixed",
         backdropFilter: "saturate(180%) blur(20px)",
-        backgroundColor: "white",
+        backgroundColor: "--background-color",
         zIndex: 99,
       }}
     >
