@@ -24,13 +24,11 @@ const Navbar: React.FC<NavbarProps> = ({
         backdropFilter: "saturate(180%) blur(20px)",
         backgroundColor: "white",
         zIndex: 99,
-        boxShadow: "0 1px 0 var(--nav-border-color)",
-        
       }}
     >
-      <ul style={{overflow: 'scroll'}}>
+      <ul >
         <li>
-          <a onClick={() => window.scrollTo({'behavior': 'smooth', 'top': isNonMobileScreens ? 2000 : 0,'left': 0})} style={{fontSize: '0.5rem'}}>
+          <a onClick={() => window.scrollTo({ 'behavior': 'smooth', 'top': isNonMobileScreens ? 2000 : 0, 'left': 0 })}>
             PDAO 2023
           </a>
         </li>
