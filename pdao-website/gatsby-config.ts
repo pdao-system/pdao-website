@@ -34,7 +34,9 @@ const config: GatsbyConfig = {
                 "path": "./src/pages/"
             },
             __key: "pages"
-        }]
+        },
+        
+    ]
 };
 
 export default config;

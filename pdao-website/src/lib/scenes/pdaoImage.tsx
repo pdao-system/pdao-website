@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useRef } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+
 const center = {
   width: "100%",
   display: "flex",
@@ -16,8 +17,8 @@ const PdaoImage = ({ windowWidth }: PdaoImageProps) => {
     const isNonMobileScreens = useMediaQuery("(min-width:10000px)");
     if(!isNonMobileScreens){
         return (
-            <div style={{height: '850px', alignItems: 'center', display: 'flex'}}>
-                <div style={{}}>
+            <div style={{height: '850px', width: '60%', alignItems: 'center', display: 'flex', justifyContent: 'center'}}>
+                <div style={{alignItems: 'center', display: 'flex', justifyContent: 'center'}}>
                     <StaticImage src="../../images/logo_vertical.PNG" alt="logo"></StaticImage> 
                 </div>
             </div>

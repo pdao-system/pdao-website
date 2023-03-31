@@ -1,11 +1,14 @@
 import React, { RefObject, CSSProperties, useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Radio from '@mui/material/Radio';
-import { GatsbyImage } from "gatsby-plugin-image"
+import CarouselPage from './carousel';
 interface AboutProps {
     aboutRef: RefObject<HTMLSelectElement>,
     center: CSSProperties,
 }
+
+
+
 const About = ({ aboutRef, center }: AboutProps) => {
     return (
         <section ref={aboutRef}>
@@ -15,6 +18,7 @@ const About = ({ aboutRef, center }: AboutProps) => {
                 <h5 style={center}>舉辦目的在於讓參賽者能藉由本競賽，評估、測驗程式設計能力，並在競賽過程中，累積相關實戰經驗。</h5>
                 <p></p>
             </hgroup>
+            <CarouselPage />
             <p>
 
                 <div className="grid">
@@ -62,55 +66,7 @@ const ImagesSilder = ({ aboutRef, center }: AboutProps) => {
 
 
             </hgroup>
-            {radioButtons.map((num, i) => {
-                if (selectedValue !== num) return null;
-                if (selectedValue === '241') {
-                    return <StaticImage src={"../../images/241.jpg"} alt="image" style={{ transition: '2s' }}></StaticImage>
-                } else if (selectedValue === '254') {
-                    return <StaticImage src={"../../images/254.jpg"} alt="image"></StaticImage>
-                } else if (selectedValue === '274') {
-                    return <StaticImage src={"../../images/274.jpg"} alt="image"></StaticImage>
-                }
-                else if (selectedValue === '279') {
-                    return <StaticImage src={"../../images/279.jpg"} alt="image"></StaticImage>
-                }
-                else if (selectedValue === '283') {
-                    return <StaticImage src={"../../images/283.jpg"} alt="image"></StaticImage>
-                }
-                else if (selectedValue === '290') {
-                    return <StaticImage src={"../../images/290.jpg"} alt="image"></StaticImage>
-                }
-                else if (selectedValue === '309') {
-                    return <StaticImage src={"../../images/309.jpg"} alt="image"></StaticImage>
-                } else if (selectedValue === '314') {
-                    return <StaticImage src={"../../images/314.jpg"} alt="image"></StaticImage>
-                }
-                else if (selectedValue === '318') {
-                    return <StaticImage src={"../../images/318.jpg"} alt="image"></StaticImage>
-                }
-                else if (selectedValue === '324') {
-                    return <StaticImage src={"../../images/324.jpg"} alt="image"></StaticImage>
-                }
-
-            })}
-
-            <div style={{ justifyContent: 'space-evenly', overflowX: "auto", display: 'flex' }}>
-
-                {radioButtons.map((value, index) => (
-                    <Radio
-                        key={index}
-                        checked={selectedValue === value}
-                        onChange={handleChange}
-                        value={value}
-                        name="radio-buttons"
-                        inputProps={{ 'aria-label': value }}
-                        color={'primary'}
-                        sx={{
-                            color: 'white',
-                        }}
-                    />
-                ))}
-            </div>
+            <CarouselPage />
             <h6 style={{ ...center, color: "white" }}>相官：資管 B07 施芊羽</h6>
 
         </section>

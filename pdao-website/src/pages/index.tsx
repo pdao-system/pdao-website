@@ -59,6 +59,7 @@ const IndexPage: React.FC<PageProps> = () => {
         backgroundColor: "rgb(29, 44, 63)",
         overflowX: "hidden",
         scrollBehavior: "smooth",
+        
 
       }}
     >
@@ -70,10 +71,14 @@ const IndexPage: React.FC<PageProps> = () => {
         sponsorsRef={sponsorsRef}
       ></Navbar>
       {/* You can use a GatsbyImage component if the image is dynamic */}
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
       <PdaoImage windowWidth={windowWidth}></PdaoImage>
-
+      </div>
+      
+      
       <main className="container">
         {isNonMobileScreens ? <div style={{ height: "10000px", scrollBehavior: "smooth" }}></div> : <></>}
+        
         <About aboutRef={aboutRef} center={center}></About>
         <Info infoRef={infoRef} center={center}></Info>
         <Teams teamsRef={teamsRef} center={center}></Teams>
