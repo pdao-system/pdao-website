@@ -1,6 +1,7 @@
 import React, { RefObject, CSSProperties, useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Radio from '@mui/material/Radio';
+import { Box } from '@mui/material'
 import CarouselPage from './carousel';
 interface AboutProps {
     aboutRef: RefObject<HTMLSelectElement>,
@@ -66,8 +67,11 @@ const ImagesSilder = ({ aboutRef, center }: AboutProps) => {
 
 
             </hgroup>
-            <CarouselPage />
             <h6 style={{ ...center, color: "white" }}>相官：資管 B07 施芊羽</h6>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <CarouselPage />
+            </div>
+
 
         </section>
     )

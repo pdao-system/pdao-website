@@ -83,12 +83,13 @@ const IndexPage: React.FC<PageProps> = () => {
         <Info infoRef={infoRef} center={center}></Info>
         <Teams teamsRef={teamsRef} center={center}></Teams>
         <Sponsor SponsorRef={sponsorsRef} center={center} ></Sponsor>
+        <h5 style={{ ...center, fontSize: '2rem', color: 'white' }}>更多內容請至<a href="https://linktr.ee/pdao2023">官方粉絲專頁</a></h5>
         <Contact
           contactRef={contactRef}
           center={center}
           lastUpdate={lastUpdate}
         ></Contact>
-        <h1 style={{ ...center, fontSize: '2rem', color: 'white' }}>更多內容請至官方ig...</h1>
+        
       </main>
     </body>
   );

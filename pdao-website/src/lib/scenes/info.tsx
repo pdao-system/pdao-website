@@ -21,9 +21,7 @@ const Info = ({ infoRef, center }: InfoProps) => {
           內容僅供參考，以
           <a href="https://hackmd.io/@pdao/B1dLeK5Cs">正式活動簡章</a>為準。
         </h5>
-        <h5 style={{ ...center, color: "white" }}>
-          所有活動資訊連結<a href="https://linktr.ee/pdao2023">點我！</a>
-        </h5>
+        
       </hgroup>
 
       <div className="grid" style={{ alignItems: "baseline" }}>
