@@ -6,7 +6,9 @@ export default function CarouselPage()
 {
 
     return (
-            <Carousel indicatorIconButtonProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
+            <Carousel 
+            autoPlay={false}
+            indicatorIconButtonProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
                 style: {
                     display: 'none'
                 }
