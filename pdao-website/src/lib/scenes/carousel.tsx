@@ -8,7 +8,7 @@ export default function CarouselPage()
     return (
             <Carousel 
             autoPlay={false}
-            sx={{ width: "90%" }}
+            sx={{ width: "90%", maxWidth:"30rem" }}
             indicatorIconButtonProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
                 style: {
                     display: 'none'
