@@ -32,6 +32,7 @@ const sponsorData: SponsorData[] = [
   { name: "詹子儀", amount: 2000 },
   { name: "劉騏瑋", amount: 1000 },
   { name: "Daniel Tseng", amount: 1000 },
+  { name: "Loter (張瀚天)", amount: 2000 }
 ];
 
 
